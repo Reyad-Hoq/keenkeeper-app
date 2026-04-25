@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Arif Hasan",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "arif.hasan@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": [
+      "school",
+      "football"
+    ],
+    "bio": "School friend. Used to play football together every evening in the neighborhood মাঠ.",
+    "goal": 14,
+    "next_due_date": "2026-04-10"
+  },
+  {
+    "id": 2,
+    "name": "Nusrat Jahan",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "nusrat.jahan@gmail.com",
+    "days_since_contact": 12,
+    "status": "almost due",
+    "tags": [
+      "university",
+      "study group"
+    ],
+    "bio": "Met during university group projects. Still shares notes and career advice.",
+    "goal": 14,
+    "next_due_date": "2026-04-27"
+  },
+  {
+    "id": 3,
+    "name": "Tanvir Ahmed",
+    "picture": "https://randomuser.me/api/portraits/men/65.jpg",
+    "email": "tanvir.ahmed@gmail.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": [
+      "gym",
+      "fitness"
+    ],
+    "bio": "Gym partner. Keeps me motivated with workouts and diet plans.",
+    "goal": 10,
+    "next_due_date": "2026-04-30"
+  },
+  {
+    "id": 4,
+    "name": "Sadman Sakib",
+    "picture": "https://randomuser.me/api/portraits/men/71.jpg",
+    "email": "sadman.sakib@gmail.com",
+    "days_since_contact": 22,
+    "status": "overdue",
+    "tags": [
+      "office",
+      "developer"
+    ],
+    "bio": "Former colleague from first job. We used to debug code late at night together.",
+    "goal": 14,
+    "next_due_date": "2026-04-05"
+  },
+  {
+    "id": 5,
+    "name": "Farzana Rahman",
+    "picture": "https://randomuser.me/api/portraits/women/29.jpg",
+    "email": "farzana.rahman@gmail.com",
+    "days_since_contact": 9,
+    "status": "almost due",
+    "tags": [
+      "neighbor",
+      "family friend"
+    ],
+    "bio": "Grew up in the same area. Families still stay in touch during Eid.",
+    "goal": 10,
+    "next_due_date": "2026-04-26"
+  },
+  {
+    "id": 6,
+    "name": "Imran Hossain",
+    "picture": "https://randomuser.me/api/portraits/men/11.jpg",
+    "email": "imran.hossain@gmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": [
+      "cricket",
+      "childhood"
+    ],
+    "bio": "Childhood cricket buddy. Still meet occasionally for weekend matches.",
+    "goal": 7,
+    "next_due_date": "2026-04-29"
+  },
+  {
+    "id": 7,
+    "name": "Tania Sultana",
+    "picture": "https://randomuser.me/api/portraits/women/51.jpg",
+    "email": "tania.sultana@gmail.com",
+    "days_since_contact": 16,
+    "status": "overdue",
+    "tags": [
+      "freelancer",
+      "design"
+    ],
+    "bio": "Met through freelancing projects. Great UI/UX designer with creative ideas.",
+    "goal": 14,
+    "next_due_date": "2026-04-11"
+  },
+  {
+    "id": 8,
+    "name": "Rakib Chowdhury",
+    "picture": "https://randomuser.me/api/portraits/men/85.jpg",
+    "email": "rakib.chowdhury@gmail.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": [
+      "startup",
+      "business"
+    ],
+    "bio": "Working on a startup together. Always discussing new business ideas.",
+    "goal": 10,
+    "next_due_date": "2026-04-28"
+  },
+  {
+    "id": 9,
+    "name": "Maliha Karim",
+    "picture": "https://randomuser.me/api/portraits/women/63.jpg",
+    "email": "maliha.karim@gmail.com",
+    "days_since_contact": 13,
+    "status": "almost due",
+    "tags": [
+      "book club",
+      "reading"
+    ],
+    "bio": "Book club friend. We exchange books and discuss novels regularly.",
+    "goal": 14,
+    "next_due_date": "2026-04-26"
+  },
+  {
+    "id": 10,
+    "name": "Shafiqur Rahman",
+    "picture": "https://randomuser.me/api/portraits/men/90.jpg",
+    "email": "shafiqur.rahman@gmail.com",
+    "days_since_contact": 25,
+    "status": "overdue",
+    "tags": [
+      "mentor",
+      "career"
+    ],
+    "bio": "Senior mentor who guided me in my early career decisions.",
+    "goal": 21,
+    "next_due_date": "2026-04-01"
+  },
+  {
+    "id": 11,
+    "name": "Jannatul Ferdous",
+    "picture": "https://randomuser.me/api/portraits/women/14.jpg",
+    "email": "jannatul.ferdous@gmail.com",
+    "days_since_contact": 8,
+    "status": "almost due",
+    "tags": [
+      "cousin",
+      "family"
+    ],
+    "bio": "Cousin sister. We usually catch up during family gatherings and events.",
+    "goal": 10,
+    "next_due_date": "2026-04-27"
+  },
+  {
+    "id": 12,
+    "name": "Mahmudul Hasan",
+    "picture": "https://randomuser.me/api/portraits/men/55.jpg",
+    "email": "mahmudul.hasan@gmail.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": [
+      "gaming",
+      "online friend"
+    ],
+    "bio": "Met through online gaming. Regularly play multiplayer games together.",
+    "goal": 7,
+    "next_due_date": "2026-04-30"
+  }
+]
