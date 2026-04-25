@@ -1,9 +1,12 @@
+
 import Hero from "./Hero";
+import Allfriends from "./Allfriends";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="w-9/12 mx-auto space-y-10">
       <Hero />
+      <Allfriends />
     </div>
   );
 };
