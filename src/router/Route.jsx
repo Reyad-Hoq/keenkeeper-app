@@ -15,7 +15,11 @@ export const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: "timeline", element: <Timeline /> },
       { path: "stats", element: <Stats /> },
-      { path: "friendDetails", element: <FriendDetails /> },
+      {
+        path: "friendDetails/:friendId",
+        element: <FriendDetails />,
+        loader: () => fetch("/data/data.json")
+      },
     ],
     errorElement: <Errorpage />
   },

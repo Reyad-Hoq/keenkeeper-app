@@ -4,8 +4,16 @@ import { CiVideoOn } from "react-icons/ci";
 import { RiNotificationSnoozeLine } from "react-icons/ri";
 import { IoArchiveOutline } from "react-icons/io5";
 import { AiOutlineDelete } from "react-icons/ai";
+import { useLoaderData, useParams } from "react-router";
 
 const FriendDetails = () => {
+  const { friendId } = useParams();
+  console.log(id)
+  const friends = useLoaderData()
+  console.log(friends)
+  {
+    friends.find(friend => friend.id === friendId )
+  }
   return (
     <div className="min-h-screen p-6 flex justify-center items-center w-9/12 mx-auto">
       <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-3 gap-6">

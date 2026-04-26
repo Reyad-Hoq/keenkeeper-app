@@ -10,7 +10,7 @@ const FriendsCard = ({ allfriendsPromise }) => {
       <div className="grid grid-cols-4 gap-10">
         {
           friends.map(friend => (
-            <Link to={"/friendDetails"} key={friend.id}>
+            <Link to={`friendDetails/${friend.id}`} key={friend.id}>
               <div className="card bg-base-100 shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300">
                 <figure className="px-10 pt-10">
                   <img
