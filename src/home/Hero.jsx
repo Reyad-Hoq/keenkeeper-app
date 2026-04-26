@@ -3,7 +3,7 @@
 const Hero = () => {
   return (
     <div>
-      <div className="hero bg-base-200 max-h-screen">
+      <div className="hero bg-base-200 max-h-screen py-20">
         <div className="hero-content text-center">
           <div className="max-w-3xl">
             <h1 className="text-5xl font-bold">Friends to keep close in your life</h1>
