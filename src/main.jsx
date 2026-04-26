@@ -6,6 +6,6 @@ import { router } from './router/Route'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router} fallbackElement={<p>Loading...</p>} />
   </StrictMode>,
 )
