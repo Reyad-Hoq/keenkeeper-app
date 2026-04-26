@@ -1,16 +1,22 @@
 import { RiHome4Line, RiTimeLine } from "react-icons/ri";
 import { GoGraph } from "react-icons/go";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import LogoImg from "../../assets/logo.png"
 const Navbar = () => {
   const links = <>
-    <li className="text-gray-500 font-semibold"><Link to={"/"}> <RiHome4Line />
-      Home</Link></li>
-    <li className="text-gray-500 font-semibold"><Link to={"timeline"}><RiTimeLine />
-      Timeline</Link></li>
-    <li className="text-gray-500 font-semibold"><Link to={"stats"}>
-      <GoGraph />
-      Stats</Link></li>
+    <li className="text-gray-500 font-semibold"><NavLink
+      to={"/"}
+      className={({ isActive }) => isActive ? "bg-[#244D3F] text-white transition-all duration-300" : ""}> <RiHome4Line className="w-4 h-4" />
+      Home</NavLink></li>
+    <li className="text-gray-500 font-semibold"><NavLink to={"timeline"}
+      className={({ isActive }) => isActive ? "bg-[#244D3F] text-white duration-200" : ""}
+    ><RiTimeLine className="w-4 h-4" />
+      Timeline</NavLink></li>
+    <li className="text-gray-500 font-semibold"><NavLink to={"stats"}
+      className={({ isActive }) => isActive ? "bg-[#244D3F] text-white transition duration-300" : ""}
+    >
+      <GoGraph className="w-4 h-4" />
+      Stats</NavLink></li>
   </>
 
   return (
@@ -32,7 +38,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-end hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 gap-3">
             {links}
           </ul>
         </div>

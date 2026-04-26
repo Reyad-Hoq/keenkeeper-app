@@ -25,7 +25,7 @@ const FriendDetails = () => {
   console.log(targetedFriend)
   const { bio, days_since_contact, email, goal, id, name, next_due_date, picture, status, tags } = targetedFriend;
   return (
-    <div className="min-h-screen p-6 flex justify-center items-center w-9/12 mx-auto">
+    <div key={id} className="min-h-screen p-6 flex justify-center items-center w-9/12 mx-auto">
       <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-3 gap-6">
 
         {/* LEFT PROFILE CARD + ACTIONS */}
