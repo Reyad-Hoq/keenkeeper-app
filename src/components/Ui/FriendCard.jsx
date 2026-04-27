@@ -7,6 +7,8 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { useContext } from "react";
 import { InteractionContext } from "../../context/InteractionContext";
 
+
+
 const formatDate = (dateStr) => {
   return new Date(dateStr)
     .toLocaleDateString("en-GB", {

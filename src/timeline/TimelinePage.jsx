@@ -9,7 +9,7 @@ const TimelinePage = () => {
   const { timelines } = useContext(InteractionContext);
   if (timelines.length === 0) {
     return <div>
-      <div className="hero bg-base-200 min-h-[50vh]">
+      <div className="hero bg-base-200 min-h-[60vh]">
         <div className="hero-content text-center flex flex-col">
           <ImSad className="w-10 h-10 text-[#244D3F]" />
           <div className="max-w-md">
@@ -49,7 +49,9 @@ const TimelinePage = () => {
           {/* Content */}
           <div>
             <p className="font-medium text-gray-500">
-              <span className="font-semibold text-[#244D3F]">{getLabel(action)}</span> with{" "}
+              <span className="font-semibold text-[#244D3F]">{
+                getLabel(action)
+              }</span> with{" "}
               {name}
             </p>
             <p className="text-sm text-gray-400">

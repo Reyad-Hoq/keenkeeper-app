@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { InteractionContext } from "./InteractionContext";
+import { toast } from "react-toastify";
 
 
 const InteractionProvider = ({ children }) => {
@@ -13,8 +14,18 @@ const InteractionProvider = ({ children }) => {
       action: type,
       time: new Date()
     };
-
     setTimelines(prev => [...prev, newEntry]);
+    if (type === "call") {
+      toast.success(`📞 Calling ${friend.name}...`);
+    }
+
+    if (type === "text") {
+      toast.success(`💬 Texting ${friend.name}...`);
+    }
+
+    if (type === "video") {
+      toast.success(`🎥 Video calling ${friend.name}...`);
+    }
   };
 
   const data = {
