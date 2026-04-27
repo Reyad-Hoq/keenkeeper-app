@@ -1,16 +1,33 @@
 import { useContext } from "react";
 import { InteractionContext } from "../context/InteractionContext";
-import { BiPhoneCall } from "react-icons/bi";
-import { MdOutlineTextsms } from "react-icons/md";
-import { CiVideoOn } from "react-icons/ci";
-
+import { Link } from "react-router";
+import { ImSad } from "react-icons/im";
+import Video from "../assets/video.png"
+import Call from "../assets/call.png"
+import Text from "../assets/text.png"
 const TimelinePage = () => {
   const { timelines } = useContext(InteractionContext);
-
+  if (timelines.length === 0) {
+    return <div>
+      <div className="hero bg-base-200 min-h-[50vh]">
+        <div className="hero-content text-center flex flex-col">
+          <ImSad className="w-10 h-10 text-[#244D3F]" />
+          <div className="max-w-md">
+            <h1 className="text-4xl font-bold text-neutral/90">No Timeline Available
+            </h1>
+            <p className="py-6 text-gray-500">
+              There are no events or updates recorded in the timeline yet.
+            </p>
+            <Link to={"/"} className="btn bg-[#244D3F] text-white">Go to Home Page</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
   const getIcon = (action) => {
-    if (action === "call") return <BiPhoneCall className="text-xl" />;
-    if (action === "text") return <MdOutlineTextsms className="text-xl" />;
-    if (action === "video") return <CiVideoOn className="text-xl" />;
+    if (action === "call") return <img src={Call} alt="Call-icon" />;
+    if (action === "text") return <img src={Text} alt="Call-icon" />;
+    if (action === "video") return <img src={Video} alt="Call-icon" />;
   };
 
   const getLabel = (action) => {
@@ -31,11 +48,11 @@ const TimelinePage = () => {
 
           {/* Content */}
           <div>
-            <p className="font-medium">
-              <span className="font-semibold">{getLabel(action)}</span> with{" "}
+            <p className="font-medium text-gray-500">
+              <span className="font-semibold text-[#244D3F]">{getLabel(action)}</span> with{" "}
               {name}
             </p>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-400">
               {new Date(time).toDateString()}
             </p>
           </div>

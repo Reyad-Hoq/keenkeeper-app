@@ -19,7 +19,6 @@ const formatDate = (dateStr) => {
 
 const FriendCard = ({ targetedFriend }) => {
   const { handleTimeline } = useContext(InteractionContext);
-  console.log(handleTimeline)
   const {
     bio,
     days_since_contact,
