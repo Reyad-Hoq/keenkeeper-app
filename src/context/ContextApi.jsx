@@ -1,16 +1,27 @@
-import { createContext, useState } from "react";
+import { useState } from "react";
+import { InteractionContext } from "./InteractionContext";
 
-export const InteractionContext = createContext();
 
 const InteractionProvider = ({ children }) => {
-  const [call, setCall] = useState([])
-  const handleCall = () => {
-    // stored friend id
-    // stored localstorage
-    // array of object 
-    // 
+  const [timelines, setTimelines] = useState([]);
+
+  const handleTimeline = (friend, type) => {
+    const newEntry = {
+      id: Date.now(),
+      friendId: friend.id,
+      name: friend.name,
+      action: type,
+      time: new Date()
+    };
+
+    setTimelines(prev => [...prev, newEntry]);
+  };
+
+  const data = {
+    timelines,
+    setTimelines,
+    handleTimeline
   }
-  const data = { test: "demo" }
   return (
     <InteractionContext.Provider value={data}>
       {children}

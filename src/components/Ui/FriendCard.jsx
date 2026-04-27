@@ -4,6 +4,8 @@ import { CiVideoOn } from "react-icons/ci";
 import { RiNotificationSnoozeLine } from "react-icons/ri";
 import { IoArchiveOutline } from "react-icons/io5";
 import { AiOutlineDelete } from "react-icons/ai";
+import { useContext } from "react";
+import { InteractionContext } from "../../context/InteractionContext";
 
 const formatDate = (dateStr) => {
   return new Date(dateStr)
@@ -16,7 +18,19 @@ const formatDate = (dateStr) => {
 };
 
 const FriendCard = ({ targetedFriend }) => {
-  const { bio, days_since_contact, email, goal, id, name, next_due_date, picture, status, tags } = targetedFriend;
+  const { handleTimeline } = useContext(InteractionContext);
+  console.log(handleTimeline)
+  const {
+    bio,
+    days_since_contact,
+    email,
+    goal,
+    id,
+    name,
+    next_due_date,
+    picture,
+    status,
+    tags } = targetedFriend;
   return (
     <div key={id} className="min-h-screen p-6 flex justify-center items-center w-9/12 mx-auto">
       <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -111,26 +125,31 @@ const FriendCard = ({ targetedFriend }) => {
             <h3 className="font-semibold mb-4">Quick Check-In</h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <button className="border border-gray-300 rounded-lg p-4 flex flex-col items-center hover:bg-gray-100 transition">
+              <button
+                onClick={() => handleTimeline(targetedFriend, "call")}
+                className="border border-gray-300 rounded-lg p-4 flex flex-col items-center hover:bg-gray-100 transition">
                 <BiPhoneCall className="w-5 h-5" />
                 <span>Call</span>
               </button>
 
-              <button className="border  border-gray-300 rounded-lg p-4 flex flex-col items-center hover:bg-gray-100 transition">
+              <button
+                onClick={() => handleTimeline(targetedFriend, "text")}
+                className="border  border-gray-300 rounded-lg p-4 flex flex-col items-center hover:bg-gray-100 transition">
                 <MdOutlineTextsms className="w-5 h-5" />
                 <span>Text</span>
               </button>
 
-              <button className="border border-gray-300 rounded-lg p-4 flex flex-col items-center hover:bg-gray-100 transition">
+              <button
+                onClick={() => handleTimeline(targetedFriend, "video")}
+                className="border border-gray-300 rounded-lg p-4 flex flex-col items-center hover:bg-gray-100 transition">
                 <CiVideoOn className="w-5 h-5" />
                 <span>Video</span>
               </button>
             </div>
           </div>
-
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
