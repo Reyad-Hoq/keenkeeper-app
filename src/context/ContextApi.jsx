@@ -1,10 +1,21 @@
+import { createContext, useState } from "react";
 
-const ContextApi = () => {
+export const InteractionContext = createContext();
+
+const InteractionProvider = ({ children }) => {
+  const [call, setCall] = useState([])
+  const handleCall = () => {
+    // stored friend id
+    // stored localstorage
+    // array of object 
+    // 
+  }
+  const data = { test: "demo" }
   return (
-    <div>
-
-    </div>
+    <InteractionContext.Provider value={data}>
+      {children}
+    </InteractionContext.Provider>
   );
 };
 
-export default ContextApi;
+export default InteractionProvider;
