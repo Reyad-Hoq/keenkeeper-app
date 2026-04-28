@@ -5,7 +5,7 @@ import InformationCard from "./InformationCard";
 
 const Allfriends = ({ allfriendsPromise }) => {
   return (
-    <div className="space-y-10">
+    <div className="space-y-1 md:space-y-10">
       <InformationCard allfriendsPromise={allfriendsPromise} />
       <FriendsCard allfriendsPromise={allfriendsPromise} />
     </div>

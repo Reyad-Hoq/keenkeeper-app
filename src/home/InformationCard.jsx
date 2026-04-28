@@ -4,7 +4,7 @@ const InformationCard = ({ allfriendsPromise }) => {
   const friends = use(allfriendsPromise)
   console.log(friends.length)
   return (
-    <div className="grid grid-cols-4 gap-5 border-b-2 border-gray-200 py-10">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-5 border-b-2 border-gray-200 py-10">
       <div className="card bg-base-100 text-neutral-content shadow-lg">
         <div className="card-body items-center text-center">
           <h2 className="card-title text-[#244D3F] text-2xl">{friends.length}</h2>

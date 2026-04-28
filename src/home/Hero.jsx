@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 
 
 const Hero = () => {
@@ -11,7 +12,7 @@ const Hero = () => {
               Your personal shelf of meaningful connections. Browse, tend, and nurture the
               relationships that matter most.
             </p>
-            <button className="btn bg-[#244D3F] text-primary-content">+ Add a Friend</button>
+            <Link to={"addFriend"} className="btn bg-[#244D3F] text-primary-content">+ Add a Friend</Link>
           </div>
         </div>
       </div>

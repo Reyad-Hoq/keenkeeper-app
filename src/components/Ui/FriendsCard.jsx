@@ -7,7 +7,7 @@ const FriendsCard = ({ allfriendsPromise }) => {
   return (
     <>
       <h2 className="card-title text-2xl">Your Friends</h2>
-      <div className="grid grid-cols-4 gap-10">
+      <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-10">
         {
           friends.map(friend => (
             <Link to={`friendDetails/${friend.id}`} key={friend.id}>

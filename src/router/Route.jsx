@@ -6,6 +6,7 @@ import Stats from "../stats/StatsPage";
 import Errorpage from "../Errorpage/Errorpage";
 import HomePage from "../home/HomePage";
 import FriendDetails from "../components/Ui/FriendDetails";
+import AddFriendPage from "../components/Ui/AddFriend";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ export const router = createBrowserRouter([
         element: <FriendDetails />,
         loader: async () => fetch("/data/data.json")
       },
+      { path: "addFriend", element: <AddFriendPage /> },
     ],
     errorElement: <Errorpage />
   },

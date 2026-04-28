@@ -4,13 +4,17 @@ import { InteractionContext } from "../context/InteractionContext";
 
 const StatsPage = () => {
   const { timelines } = useContext(InteractionContext);
+  console.log(timelines)
+  const counts = timelines.reduce((acc, item) => {
+    acc[item.action] = (acc[item.action] || 0) + 1;
+    return acc;
+  }, {});
   const data = [
-    { name: 'text', value: 400, fill: '#0088FE' },
-    { name: 'call', value: 300, fill: '#FFBB28' },
-    { name: 'video', value: 200, fill: '#FF8042' },
+    { name: 'call', value: counts.call || 0, fill: '#FFBB28' },
+    { name: 'text', value: counts.text || 0, fill: '#0088FE' },
+    { name: 'video', value: counts.video || 0, fill: '#FF8042' },
   ];
   const RADIAN = Math.PI / 180;
-  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
   const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent }) => {
     if (cx == null || cy == null || innerRadius == null || outerRadius == null) {
@@ -29,13 +33,9 @@ const StatsPage = () => {
     );
   };
 
-  const MyCustomPie = ({ PieSectorShapeProps }) => {
-    return <Sector {...props} fill={COLORS[props.index % COLORS.length]} />;
-  };
-
   return (
-    <div className="flex flex-col justify-center items-center min-h-[60vh] my-10">
-      <h2 className="text-4xl font-semibold">Friendship Analytics</h2>
+    <div className="flex flex-col justify-center items-center min-h-[60vh] my-10 border border-slate-300  mx-auto w-9/12 rounded-lg py-5">
+      <h2 className="text-5xl font-bold text-base-content/80">Friendship Analytics</h2>
       <PieChart style={{
         width: '100%',
         maxWidth: '500px',
