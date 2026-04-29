@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { InteractionContext } from "../context/InteractionContext";
 import Video from "../assets/video.png"
 import Call from "../assets/call.png"
@@ -12,10 +12,15 @@ const TimelinePage = () => {
   console.log(timelines)
   const [sortingType, setSortingType] = useState("");
   console.log(sortingType);
+  const [sortOrder, setSortOrder] = useState("newest");
 
-  const filteredList = sortingType
+  const filteredList = (sortingType
     ? timelines.filter(item => item.action === sortingType)
-    : timelines;
+    : timelines).sort((a, b) =>
+      sortOrder === "newest"
+        ? new Date(b.time) - new Date(a.time) // latest first
+        : new Date(a.time) - new Date(b.time) // oldest first
+    );
 
   if (timelines.length === 0) {
     return <div>
@@ -37,7 +42,7 @@ const TimelinePage = () => {
 
   return (
     <div className="w-9/12 mx-auto space-y-4 my-10 min-h-[60vh]">
-      <FilteredAction sortingType={sortingType} setSortingType={setSortingType} />
+      <FilteredAction sortingType={sortingType} setSortingType={setSortingType} setSortOrder={setSortOrder} sortOrder={sortOrder} />
       {filteredList.map(({ id, name, action, time }) => (
         <div
           key={id}
